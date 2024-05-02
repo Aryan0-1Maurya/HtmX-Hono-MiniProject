@@ -17,7 +17,7 @@ export const todoData = {
         }
     ],
     getNextId: function () {
-        return this.todos.sort((a, b) => b.id - a.id)[0].id + 1
+      return this.todos.length === 0 ? 1 : this.todos.sort((a, b) => b.id - a.id)[0].id + 1
     },
     createTodo: function (newTodo: string) {
 
