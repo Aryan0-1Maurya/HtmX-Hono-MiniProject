@@ -3,5 +3,6 @@
     "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
+    "lib": ["ES6", "dom"]
   }
 }

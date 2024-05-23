@@ -28,6 +28,10 @@ export const caseData = {
     getNextId: function () {
         return this.cases.sort((a, b) => b.id - a.id)[0].id + 1
     },
+    searchCase: function (searchTerm: any) {
+        const results = this.cases.filter(c_se => c_se.caseNo.includes(searchTerm))
+        return results
+    },
     createCase: function (newCase: string) {
 
         this.cases = [...this.cases, {

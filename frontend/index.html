@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sl-theme-dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,47 @@
     <script src="https://unpkg.com/htmx.org@1.9.10"
         integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-    <form hx-post="http://localhost:3000/case" hx-target="#case-list">
+    <h3> 
+        Search Cases 
+        <span class="htmx-indicator"> 
+            <img src="/img/bars.svg"/> Searching... 
+            </span> 
+        </h3>
+        <sl-input class="form-control" type="search" 
+                name="search" placeholder="Begin Typing To Search Users..." 
+                hx-post="http://localhost:3000/case/search" 
+                hx-trigger="input changed delay:500ms, search" 
+                hx-target="#search-results" 
+                hx-indicator=".htmx-indicator"></sl-input>
+        
+        <table class="table"
+        hx-get="http://localhost:3000/case"
+        hx-trigger="load"
+        hx-swap="innerHTML"
+        hx-target="#search-results">
+            <thead>
+            <tr>
+                <th>Case No</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody id="search-results">
+            </tbody>
+        </table>
+        
+    <!-- <form hx-post="http://localhost:3000/case" hx-target="#case-list">
         <label for="newCase">New Case:</label>
         <input type="text" name="newCase" id="newCase" />
         <button type="submit">Submit</button>
     </form>
 
-    <ol id="case-list" hx-get="http://localhost:3000/case" hx-trigger="load"></ol>
+    <ol id="case-list" hx-get="http://localhost:3000/case" hx-trigger="load"></ol> -->
 
 </body>
 

@@ -11,6 +11,7 @@ app.use('/*', cors())
 app.get('/case', (c) => {
   const listItems = getListItems(caseData.cases)
 
+  console.log({listItems})
   return c.html(
     html`${listItems}`
   )
@@ -22,6 +23,15 @@ app.post('/case', async (c) => {
 
   const listItems = getListItems(caseData.cases)
 
+  return c.html(
+    html`${listItems}`
+  )
+})
+
+app.post('/case/search', async (c) => {
+  const { search } = await c.req.parseBody()
+  const searchResults = caseData.searchCase(search)
+  const listItems = getListItems(searchResults)
   return c.html(
     html`${listItems}`
   )
@@ -58,23 +68,33 @@ serve({
 })
 
 function getListItems(cases: typeof caseData.cases) {
-  return cases.sort((a, b) => b.caseNo.localeCompare(a.caseNo, undefined, {numeric: true})
-).map(c_se => (
-    html`<li>
-      <input 
-        type="checkbox" 
-        id="case_${c_se.id}" 
-        ${c_se.completed ? 'checked' : ''} 
-        hx-put="http://localhost:3000/case/${c_se.id}"
-        hx-trigger="click" 
-        hx-target="#case-list" 
-      />
-      <label for="case_${c_se.id}">${c_se.caseNo}</label>
-      <button
-        hx-delete="http://localhost:3000/case/${c_se.id}"
-        hx-trigger="click" 
-        hx-target="#case-list" 
-      >❌</button>
-    </li>`
+  return cases.map(c_se => (
+    html`
+    <tr>
+      <td>${c_se.caseNo}</td>
+      <td>Last Name</td>
+      <td>Email</td>
+    </tr>
+    `
   ))
+//   return cases.sort((a, b) => b.caseNo.localeCompare(a.caseNo, undefined, {numeric: true})
+// ).map(c_se => (
+//     html`<li>
+//       <label for="case_${c_se.id}">${c_se.caseNo}</label>
+//       <span>${c_se.caption}</span>
+//       <!--<button
+//         hx-delete="http://localhost:3000/case/${c_se.id}"
+//         hx-trigger="click" 
+//         hx-target="#case-list" 
+//       >❌</button>-->
+//       <input 
+//       type="checkbox" 
+//       id="case_${c_se.id}" 
+//       ${c_se.completed ? 'checked' : ''} 
+//       hx-put="http://localhost:3000/case/${c_se.id}"
+//       hx-trigger="click" 
+//       hx-target="#case-list" 
+//     />
+//     </li>`
+//   ))
 }
