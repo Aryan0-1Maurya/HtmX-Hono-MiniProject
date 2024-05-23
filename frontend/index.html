@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTMX Todo</title>
+    <title>HTMX Matters</title>
     <script src="https://unpkg.com/htmx.org@1.9.10"
         integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
         crossorigin="anonymous"></script>
@@ -12,13 +12,13 @@
 
 <body>
 
-    <form hx-post="http://localhost:3000/todo" hx-target="#todo-list">
-        <label for="newTodo">New Todo:</label>
-        <input type="text" name="newTodo" id="newTodo" />
+    <form hx-post="http://localhost:3000/case" hx-target="#case-list">
+        <label for="newCase">New Case:</label>
+        <input type="text" name="newCase" id="newCase" />
         <button type="submit">Submit</button>
     </form>
 
-    <ol id="todo-list" hx-get="http://localhost:3000/todo" hx-trigger="load"></ol>
+    <ol id="case-list" hx-get="http://localhost:3000/case" hx-trigger="load"></ol>
 
 </body>
 

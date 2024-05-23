@@ -1,49 +1,61 @@
-export const todoData = {
-    todos: [
+export const caseData = {
+    cases: [
         {
             "id": 1,
-            "title": "delectus aut autem",
+            "statusCode": "OP",
+            "statusDate": "07-10-2020",
+            "caseNo": "2022CV000033",
+            "caption": "Susan C. Murray, Individually et al vs. Thomas W. Metcalf et al",
             "completed": false
         },
         {
             "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": true
+            "statusCode": "FL",
+            "statusDate": "10-24-2018",
+            "caseNo": "2018TJ000081",
+            "caption": "CACH, LLC vs. Courtney M Bogenschneider",
+            "completed": false
         },
         {
             "id": 3,
-            "title": "fugiat veniam minus",
+            "statusCode": "CL",
+            "statusDate": "11-10-2021",
+            "caseNo": "2021FA001715",
+            "caption": "Andreas Transo vs. Abbey Collins",
             "completed": false
-        }
+        },
     ],
     getNextId: function () {
-        return this.todos.sort((a, b) => b.id - a.id)[0].id + 1
+        return this.cases.sort((a, b) => b.id - a.id)[0].id + 1
     },
-    createTodo: function (newTodo: string) {
+    createCase: function (newCase: string) {
 
-        this.todos = [...this.todos, {
+        this.cases = [...this.cases, {
             "id": this.getNextId(),
-            "title": newTodo,
-            "completed": false,
+            "statusCode": "",
+            "statusDate": "",
+            "caseNo": newCase,
+            "caption": "",
+            "completed": false
         }]
 
-        return this.todos
+        return this.cases
     },
-    updateTodo: function (todoId: number) {
+    updateCase: function (caseId: number) {
 
-        const otherTodos = this.todos.filter(todo => todo.id !== todoId)
-        const todo = this.todos.filter(todo => todo.id === todoId)[0]
+        const otherCases = this.cases.filter(c_se => c_se.id !== caseId)
+        const c_se = this.cases.filter(c_se => c_se.id === caseId)[0]
 
-        this.todos = [...otherTodos, {
-            ...todo, completed: !todo.completed
+        this.cases = [...otherCases, {
+            ...c_se, completed: !c_se.completed
         }]
 
-        return this.todos
+        return this.cases
     },
-    deleteTodo: function (todoId: number) {
+    deleteCase: function (caseId: number) {
 
-        this.todos = this.todos.filter(todo => todo.id !== todoId)
+        this.cases = this.cases.filter(c_se => c_se.id !== caseId)
 
-        return this.todos
+        return this.cases
     },
 }
