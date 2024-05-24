@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sl-theme-dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,15 +19,15 @@
             <img src="/img/bars.svg"/> Searching... 
             </span> 
         </h3>
-        <sl-input class="form-control" type="search" 
+        <input class="form-control" type="search" 
                 name="search" placeholder="Begin Typing To Search Users..." 
-                hx-post="http://localhost:3000/case/search" 
+                hx-post="http://localhost:3001/case/search" 
                 hx-trigger="input changed delay:500ms, search" 
                 hx-target="#search-results" 
-                hx-indicator=".htmx-indicator"></sl-input>
+                hx-indicator=".htmx-indicator"></input>
         
         <table class="table"
-        hx-get="http://localhost:3000/case"
+        hx-get="http://localhost:3001/case"
         hx-trigger="load"
         hx-swap="innerHTML"
         hx-target="#search-results">
