@@ -31,7 +31,7 @@
                         <div>
                           <button class="border border-transparent flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none focus:ring-2" id="user-menu-button" type="button"><span class="absolute -inset-1.5"></span><span class="sr-only">Open user menu</span><img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" sizes="64px"></button>
                         </div>
-                        <div class="ring-1 ring-opacity-5 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring ring-black transform focus:outline-none"><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-0">Your Profile</a><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-1">Settings</a><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-2">Sign out</a></div>
+                        <div class="hidden ring-1 ring-opacity-5 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring ring-black transform focus:outline-none"><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-0">Your Profile</a><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-1">Settings</a><a class="block px-4 py-2 text-sm text-gray-700" id="user-menu-item-2">Sign out</a></div>
                       </div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@
                 <div class="flow-root mt-8">
                   <div class="overflow-x-auto -mx-4 -my-2 md:-mx-6 lg:-mx-8">
                     <div class="inline-block align-middle min-w-full py-2 px-0 md:px-6 lg:px-8 min-h-screen">
-                      <table class="divide-y divide-gray-300 min-w-full">
+                      <table class="divide-y divide-gray-300 min-w-full" hx-get="http://localhost:3001/case" hx-trigger="load" hx-swap="innerHTML" hx-target="#search-results">
                         <thead class="font-bold border-b border-black border-opacity-10">
                           <tr class="divide-x border-black border-opacity-10">
                             <th class="pl-4 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5 md:pl-0 lg:pl-0"><span class="text-sm">Case No</span></th>
@@ -104,31 +104,7 @@
                             <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">Filing Date</span></th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200 divide-opacity-10">
-                          <tr class="divide-x border-black border-opacity-10">
-                            <td class="whitespace-nowrap pt-4 pb-4 pl-4 pr-3 text-sm font-medium text-gray-900 md:pl-0 lg:pl-0"><span class="text-sm">Lindsay Walton</span></td>
-                            <td class="whitespace-nowrap px-3 pt-4 pb-4 text-sm text-gray-500"><span class="text-sm">Front-end Developer</span></td>
-                            <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2"><span class="text-sm">lindsay.walton@example.com</span></td>
-                            <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2"><span class="text-sm">Member</span></td>
-                            <td class="relative whitespace-nowrap pr-4 text-right text-sm font-medium md:pr-0 lg:pr-0 py-2 pl-0"><a class="text-indigo-600 hover:text-indigo-900"></a>
-                              <div class="inline-block relative text-left">
-                                <div>
-                                  <button class="border border-transparent rounded-full text-gray-400 grid focus:ring-offset-2 focus:ring-offset-gray-100 pb-2 hover:text-gray-600 focus:outline-none focus:ring-2 px-0 bg-opacity-100 bg-white" id="menu-button" type="button"><span class="sr-only">Open options</span><i class="transform h-5 w-5 mr-6">
-                                      <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"></path>
-                                      </svg></i></button>
-                                </div>
-                                <div class="ring-1 ring-opacity-5 absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring ring-black transform focus:outline-none">
-                                  <div class="pt-1 pb-1"><a class="text-gray-700 block px-4 py-2 text-sm" id="menu-item-0">Account settings</a><a class="text-gray-700 block px-4 py-2 text-sm" id="menu-item-1">Support</a><a class="text-gray-700 block px-4 py-2 text-sm" id="menu-item-2">License</a>
-                                    <form class="flex-col mb-0">
-                                      <button class="border border-transparent text-gray-700 block w-full px-4 py-2 text-left text-sm tracking-wide rounded border-transparent focus:outline-none" id="menu-item-3" type="button"><span class="text-sm">Sign out</span></button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
+                        <tbody class="divide-y divide-gray-200 divide-opacity-10" id="search-results"></tbody>
                       </table>
                     </div>
                   </div>
