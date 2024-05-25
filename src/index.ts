@@ -2,7 +2,7 @@ import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { html } from "hono/html";
 import { cors } from "hono/cors";
-import { caseData } from "../data/todos";
+import { caseData } from "../data/cases";
 
 const app = new Hono();
 
@@ -74,10 +74,10 @@ function getTableRows(cases: typeof caseData.cases) {
             <span class="text-sm">${c_se.caption}</span>
           </td>
           <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2">
-            <span class="text-sm">Brown</span>
+            <span class="text-sm">${c_se.countyNo}</span>
           </td>
           <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2">
-            <span class="text-sm">2021-8-12</span>
+            <span class="text-sm">${c_se.statusDate}</span>
           </td>
           <td>
             <div class="relative inline-block text-left">

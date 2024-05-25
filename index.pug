@@ -3,7 +3,7 @@ html
     head
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title HTMX Matters
+        title HTMX Cases
         link(href='../src/output.css' rel='stylesheet')
         script(src='https://unpkg.com/htmx.org@1.9.10' integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC' crossorigin='anonymous')
     body
@@ -19,11 +19,12 @@ html
                                             img.h-8.w-8(src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500' alt='Your Company' sizes='64px' class='max-w-full')
                                         div(class='hidden md:block lg:block')
                                             div(class='space-x-4 ml-10 flex items-baseline')
-                                                a(class='bg-gray-900 text-white rounded-md px-3 py-2 font-medium text-sm') Matters
+                                                a(class='bg-gray-900 text-white rounded-md px-3 py-2 font-medium text-sm') Cases
                                                 a(class='text-gray-300 rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:text-white text-sm') Billing
-                                                a(class='text-gray-300 rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:text-white text-sm') Links
                                                 a(class='text-gray-300 rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:text-white text-sm') Calendar
                                                 a(class='text-gray-300 rounded-md px-3 py-2 font-medium hover:bg-gray-700 hover:text-white text-sm') Reports
+                                                a(class='text-gray-300 block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white') New
+
                                     div(class='hidden md:block lg:block')
                                         div(class='ml-4 flex items-center md:ml-6')
                                             button(type='button' class='border border-transparent inline-block relative rounded-full bg-gray-800 p-1 text-gray-400 focus:ring-offset-2 focus:ring-offset-gray-800 hover:text-white focus:outline-none focus:ring-2')
@@ -59,6 +60,7 @@ html
                                     a(class='text-gray-300 block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white') Projects
                                     a(class='text-gray-300 block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white') Calendar
                                     a(class='text-gray-300 block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white') Reports
+                                    a(class='text-gray-300 block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white') Whats New
                                 div(class='border-t border-gray-700 pb-3 pt-4')
                                     div(class='flex items-center px-5')
                                         div(class='flex-shrink-0')
@@ -78,7 +80,7 @@ html
                                         a(class='block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white') Sign out
                         div(class='pt-10 pb-10')
                             div(class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8')
-                                h1.font-bold.tracking-tight.text-white(class='text-[30px]') Matters
+                                h1.font-bold.tracking-tight.text-white(class='text-[30px]') Case Load
                     div(class='-mt-32')
                         div(class='max-w-7xl mx-auto px-4 pb-12 md:px-6 lg:px-8 min-h-screen')
                             div(class='rounded-lg bg-white px-5 py-6 shadow md:px-6 lg:px-6 h-full min-h-screen')
@@ -95,10 +97,12 @@ html
                                                     div(class='hidden md:block lg:block')
                                                         div(class='flex items-center justify-between')
                                                             div(class='flex space-x-4')
-                                                                a(class='text-gray-500 rounded-md font-medium hover:text-gray-700 text-sm pr-3 pt-2 pb-2 pl-3') Helbing
+                                                                a(class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') All
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Helbing
                                                                 a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Arnold Smith
-                                                                a(class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') GM Law
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Blitt & Gaines
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') GM Law
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Frontline
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') CLP
                                                             div
                                                                 input#search.cursor-default.ring-1.ring-inset.rounded-md.border-0.ring.ring-gray-300.text-gray-400.text-base.leading-none.w-auto.pt-2.pb-2.z-40(
                                                                     type="search" 
@@ -130,7 +134,7 @@ html
                                                         th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
                                                             span(class='text-sm') County
                                                         th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
-                                                            span(class='text-sm') Filing Date
+                                                            span(class='text-sm') Status Date
                                                             th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
                                                             span(class='text-sm')
                                                 tbody#search-results(class='divide-y divide-gray-200 divide-opacity-10')
