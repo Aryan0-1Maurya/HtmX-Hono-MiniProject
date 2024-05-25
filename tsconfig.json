@@ -3,6 +3,8 @@
     "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
-    "lib": ["ES6", "dom"]
+    "lib": ["ES6", "dom"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }

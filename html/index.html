@@ -87,7 +87,14 @@
                           </div>
                           <div class="hidden md:block lg:block">
                             <div class="flex items-center justify-between">
-                              <div class="flex space-x-4"><a class="bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm">All</a><a class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm">Helbing</a><a class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm">Arnold Smith</a><a class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm">GM Law</a><a class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm">Frontline</a><a class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm">CLP</a></div>
+                              <div class="flex space-x-4 tab-list" role="tablist" hx-on:htmx-after-on-load="let currentTab = document.querySelector('[aria-selected=true]'); currentTab.setAttribute('aria-selected', 'false'); currentTab.classList.remove('selected'); let newTab = event.target; newTab.setAttribute('aria-selected', 'true'); newTab.classList.add('selected')">
+                                <button class="bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm" aria-controls="search-results" aria-selected="true" role="tab" hx-get="http://localhost:3001/case" hx-target="#search-results" hx-swap="outerHTML">All</button>
+                                <button class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm" aria-controls="search-results" aria-selected="false" role="tab" hx-get="http://localhost:3001/helbing" hx-target="#search-results" hx-swap="outerHTML">Helbing</button>
+                                <button class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm" aria-controls="search-results" aria-selected="false" role="tab" hx-get="http://localhost:3001/arnoldsmith" hx-target="#search-results" hx-swap="outerHTML">Arnold Smith</button>
+                                <button class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm" aria-controls="search-results" aria-selected="false" role="tab" hx-get="http://localhost:3001/gmlaw" hx-target="#search-results" hx-swap="outerHTML">GM Law</button>
+                                <button class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm" aria-controls="search-results" aria-selected="false" role="tab" hx-get="http://localhost:3001/frontline" hx-target="#search-results" hx-swap="outerHTML">Frontline</button>
+                                <button class="text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm" aria-controls="search-results" aria-selected="false" role="tab" hx-get="http://localhost:3001/clp" hx-target="#search-results" hx-swap="outerHTML">CLP</button>
+                              </div>
                               <div>
                                 <input class="cursor-default ring-1 ring-inset rounded-md border-0 ring ring-gray-300 text-gray-400 text-base leading-none w-auto pt-2 pb-2 z-40 form-control focus:outline-none placeholder:text-gray-400 focus:ring-inset focus:ring-2 focus:ring-gray-400 md:text-sm sm:text-sm lg:text-14px md:leading-6 sm:leading-6 lg:leading-6 shadow-0px-1px-2px-0px-rgba(0,0,0,0.05)" id="search" type="search" autocomplete="off" style="width: 300px; height: 32px; padding-top: 4px; padding-bottom: 4px;" name="search" hx-post="http://localhost:3001/case/search" hx-trigger="input changed delay:500ms, search" hx-swap="outerHTML" hx-target="#search-results">
                               </div>
@@ -106,7 +113,8 @@
                           <tr class="divide-x border-black border-opacity-10">
                             <th class="pl-4 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5 md:pl-0 lg:pl-0"><span class="text-sm">Case No</span></th>
                             <th class="pl-3 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5"><span class="text-sm">Caption</span></th>
-                            <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">County</span></th>
+                            <th class="pl-3 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5"><span class="text-sm">County</span></th>
+                            <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">Firm</span></th>
                             <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">Status Date</span>
                               <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"></th><span class="text-sm"></span>
                             </th>

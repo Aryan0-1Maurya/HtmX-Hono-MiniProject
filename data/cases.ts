@@ -1,3 +1,4 @@
+import county from '../data/county_codes'
 export const caseData = {
     cases: [
         {
@@ -25,7 +26,19 @@ export const caseData = {
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
             "consolidatedCaseNo": null,
-            "firm": "Helbing"
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "07-15-2020",
+                    "billedRate": 110
+                },
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "07-20-2020",
+                    "billedRate": 260
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -51,7 +64,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Status Hearing",
+                    "datePerformed": "10-30-2018",
+                    "billedRate": 220
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -77,7 +98,20 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": true,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "11-15-2021",
+                    "billedRate": 330
+                },
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "11-20-2021",
+                    "billedRate": 180
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -103,7 +137,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "CLP",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "02-25-2024",
+                    "billedRate": 140
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -129,7 +171,20 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Status Hearing",
+                    "datePerformed": "11-20-2021",
+                    "billedRate": 200
+                },
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "11-25-2021",
+                    "billedRate": 300
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -155,7 +210,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "03-05-2024",
+                    "billedRate": 170
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -181,7 +244,20 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "01-20-2024",
+                    "billedRate": 280
+                },
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "01-22-2024",
+                    "billedRate": 130
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -207,7 +283,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "09-22-2022",
+                    "billedRate": 310
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -233,7 +317,20 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "CLP",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "09-25-2023",
+                    "billedRate": 140
+                },
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "09-30-2023",
+                    "billedRate": 190
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -259,7 +356,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": true,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "01-18-2023",
+                    "billedRate": 250
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -285,7 +390,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Status Hearing",
+                    "datePerformed": "04-20-2024",
+                    "billedRate": 230
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -311,7 +424,20 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "07-01-2023",
+                    "billedRate": 160
+                },
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "07-03-2023",
+                    "billedRate": 110
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -337,7 +463,15 @@ export const caseData = {
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "03-20-2024",
+                    "billedRate": 320
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -346,10 +480,384 @@ export const caseData = {
             "statusCode": "OP",
             "canDocketJdgmt": false,
             "canFileExhibits": true,
-            "statusDate": "01-09-2024",
+            "statusDate": "05-25-2023",
             "canFileAnotherDoc": true,
             "filingSeqNo": null,
-            "caseNo": "2024SC000032",
+            "caseNo": "2023CV000124",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 15,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Midland Funding LLC vs. William R. Johnson",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "CLP",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "05-28-2023",
+                    "billedRate": 120
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "02-12-2022",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2022CV000049",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 28,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Portfolio Recovery Associates, LLC vs. Jack D. Miller",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "02-15-2022",
+                    "billedRate": 240
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "08-30-2022",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2022CV000123",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 31,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "LVNV Funding LLC vs. Christine A. Myers",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "09-02-2022",
+                    "billedRate": 290
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "07-10-2021",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2021CV000034",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 22,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "American Express National Bank vs. Brian T. Connor",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "07-15-2021",
+                    "billedRate": 180
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "03-22-2023",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2023CV000085",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 33,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Capital One Bank (USA), N.A. vs. Michael S. Collins",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "03-25-2023",
+                    "billedRate": 130
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "12-05-2023",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2023CV000221",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 35,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Synchrony Bank vs. Sharon L. Turner",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "12-10-2023",
+                    "billedRate": 270
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "01-15-2024",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2024CV000014",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 36,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Discover Bank vs. Emily R. Thompson",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "01-20-2024",
+                    "billedRate": 190
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "05-19-2022",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2022CV000143",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 37,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Wells Fargo Bank, N.A. vs. Kyle M. Rodriguez",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "05-22-2022",
+                    "billedRate": 150
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "06-24-2022",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2022CV000167",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 39,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Crown Asset Management, LLC vs. Robert L. Scott",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "06-27-2022",
+                    "billedRate": 320
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "08-14-2023",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2023CV000198",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 44,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "Midland Funding LLC vs. Laura J. Davis",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "08-17-2023",
+                    "billedRate": 180
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "04-10-2024",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2024CV000103",
+            "canWithdraw": true,
+            "attorneys": [
+                "Theresa Anne Carey"
+            ],
+            "countyNo": 45,
+            "canOptOut": false,
+            "waitingForPayment": false,
+            "caption": "LVNV Funding LLC vs. Eric J. Harris",
+            "correlationId": null,
+            "amendmentLinkText": null,
+            "batchId": null,
+            "hasExhibits": false,
+            "canSatisfyJdgmt": false,
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "04-13-2024",
+                    "billedRate": 140
+                }
+            ]
+        },
+        {
+            "jdgmts": {
+                "isLoaded": false
+            },
+            "statusCode": "OP",
+            "canDocketJdgmt": false,
+            "canFileExhibits": true,
+            "statusDate": "09-12-2021",
+            "canFileAnotherDoc": true,
+            "filingSeqNo": null,
+            "caseNo": "2021CV000074",
             "canWithdraw": true,
             "attorneys": [
                 "Theresa Anne Carey"
@@ -357,13 +865,21 @@ export const caseData = {
             "countyNo": 49,
             "canOptOut": false,
             "waitingForPayment": false,
-            "caption": "Citibank, N.A. vs. Lindsey Breske",
+            "caption": "Portfolio Recovery Associates, LLC vs. Rachel K. Nelson",
             "correlationId": null,
             "amendmentLinkText": null,
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Frontline",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Motion to Dismiss",
+                    "datePerformed": "09-15-2021",
+                    "billedRate": 270
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -372,24 +888,32 @@ export const caseData = {
             "statusCode": "OP",
             "canDocketJdgmt": false,
             "canFileExhibits": true,
-            "statusDate": "01-02-2024",
+            "statusDate": "03-15-2024",
             "canFileAnotherDoc": true,
             "filingSeqNo": null,
-            "caseNo": "2024SC000001",
+            "caseNo": "2024CV000022",
             "canWithdraw": true,
             "attorneys": [
                 "Theresa Anne Carey"
             ],
-            "countyNo": 58,
+            "countyNo": 52,
             "canOptOut": false,
             "waitingForPayment": false,
-            "caption": "Discover Bank vs. Sandra Matte",
+            "caption": "Synchrony Bank vs. John M. Robertson",
             "correlationId": null,
             "amendmentLinkText": null,
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Arnold Smith",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Notice of Appearance",
+                    "datePerformed": "03-18-2024",
+                    "billedRate": 150
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -398,24 +922,32 @@ export const caseData = {
             "statusCode": "OP",
             "canDocketJdgmt": false,
             "canFileExhibits": true,
-            "statusDate": "01-29-2024",
+            "statusDate": "06-22-2023",
             "canFileAnotherDoc": true,
             "filingSeqNo": null,
-            "caseNo": "2024SC000609",
+            "caseNo": "2023CV000106",
             "canWithdraw": true,
             "attorneys": [
                 "Theresa Anne Carey"
             ],
-            "countyNo": 13,
+            "countyNo": 53,
             "canOptOut": false,
             "waitingForPayment": false,
-            "caption": "Citibank, N.A. vs. Jami L Anderson",
+            "caption": "Crown Asset Management, LLC vs. Kevin R. Sullivan",
             "correlationId": null,
             "amendmentLinkText": null,
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "GM Law",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Answer to Complaint",
+                    "datePerformed": "06-25-2023",
+                    "billedRate": 170
+                }
+            ]
         },
         {
             "jdgmts": {
@@ -424,106 +956,41 @@ export const caseData = {
             "statusCode": "OP",
             "canDocketJdgmt": false,
             "canFileExhibits": true,
-            "statusDate": "01-22-2024",
+            "statusDate": "04-24-2024",
             "canFileAnotherDoc": true,
             "filingSeqNo": null,
-            "caseNo": "2024CV000530",
+            "caseNo": "2024CV000061",
             "canWithdraw": true,
             "attorneys": [
                 "Theresa Anne Carey"
             ],
-            "countyNo": 40,
+            "countyNo": 55,
             "canOptOut": false,
             "waitingForPayment": false,
-            "caption": "Prime Financial Credit Union vs. Rachael A. Sonnen",
+            "caption": "LVNV Funding LLC vs. Jessica L. Carter",
             "correlationId": null,
             "amendmentLinkText": null,
             "batchId": null,
             "hasExhibits": false,
             "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
-        },
-        {
-            "jdgmts": {
-                "isLoaded": false
-            },
-            "statusCode": "OP",
-            "canDocketJdgmt": false,
-            "canFileExhibits": true,
-            "statusDate": "02-28-2024",
-            "canFileAnotherDoc": true,
-            "filingSeqNo": null,
-            "caseNo": "2024CF000026",
-            "canWithdraw": true,
-            "attorneys": [
-                "Theresa Anne Carey"
-            ],
-            "countyNo": 62,
-            "canOptOut": false,
-            "waitingForPayment": false,
-            "caption": "State of Wisconsin vs. Christopher R Dunn",
-            "correlationId": null,
-            "amendmentLinkText": null,
-            "batchId": null,
-            "hasExhibits": false,
-            "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
-        },
-        {
-            "jdgmts": {
-                "isLoaded": false
-            },
-            "statusCode": "OP",
-            "canDocketJdgmt": false,
-            "canFileExhibits": true,
-            "statusDate": "12-22-2023",
-            "canFileAnotherDoc": true,
-            "filingSeqNo": null,
-            "caseNo": "2023SC000938",
-            "canWithdraw": true,
-            "attorneys": [
-                "Theresa Anne Carey"
-            ],
-            "countyNo": 9,
-            "canOptOut": false,
-            "waitingForPayment": false,
-            "caption": "WESTconsin Credit Union vs. Christina L Nielsen",
-            "correlationId": null,
-            "amendmentLinkText": null,
-            "batchId": null,
-            "hasExhibits": false,
-            "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
-        },
-        {
-            "jdgmts": {
-                "isLoaded": false
-            },
-            "statusCode": "OP",
-            "canDocketJdgmt": false,
-            "canFileExhibits": true,
-            "statusDate": "02-15-2024",
-            "canFileAnotherDoc": true,
-            "filingSeqNo": null,
-            "caseNo": "2024SC000142",
-            "canWithdraw": true,
-            "attorneys": [
-                "Theresa Anne Carey"
-            ],
-            "countyNo": 16,
-            "canOptOut": false,
-            "waitingForPayment": false,
-            "caption": "Citibank, N.A. vs. Kyle A Stoltz",
-            "correlationId": null,
-            "amendmentLinkText": null,
-            "batchId": null,
-            "hasExhibits": false,
-            "canSatisfyJdgmt": false,
-            "consolidatedCaseNo": null
+            "consolidatedCaseNo": null,
+            "client": "Helbing",
+            "servicesPerformed": [
+                {
+                    "serviceName": "Settlement",
+                    "datePerformed": "04-27-2024",
+                    "billedRate": 300
+                }
+            ]
         },
     ],
     searchCase: function (searchTerm: any) {
-        const results = this.cases.filter(c_se => c_se.caseNo.includes(searchTerm))
+        const results = this.cases.filter(
+            c_se => c_se.caseNo.toLowerCase().includes(searchTerm.toLowerCase()) 
+            || c_se.caption.toLowerCase().includes(searchTerm.toLowerCase()) 
+            || county[c_se.countyNo].toLowerCase().includes(searchTerm.toLowerCase())
+            || c_se.client.toLowerCase().includes(searchTerm.toLowerCase())
+    )
         return results
     },
     // getNextId: function () {

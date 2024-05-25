@@ -19,6 +19,15 @@
             <img src="/img/bars.svg"/> Searching... 
             </span> 
         </h3>
+
+        <div class="tab-list" role="tablist">
+            <button hx-get="/helbing" class="selected" role="tab" aria-selected="true" aria-controls="tab-content">Tab 1</button>
+            <button hx-get="/ardnoldsmith" role="tab" aria-selected="false" aria-controls="tab-content">Tab 2</button>
+            <button hx-get="/gmlaw" role="tab" aria-selected="false" aria-controls="tab-content">Tab 3</button>
+            <button hx-get="/frontline" role="tab" aria-selected="false" aria-controls="tab-content">Tab 3</button>
+            <button hx-get="/clp" role="tab" aria-selected="false" aria-controls="tab-content">Tab 3</button>
+        </div>
+
         <input class="form-control" type="search" 
                 name="search" placeholder="Begin Typing To Search Users..." 
                 hx-post="http://localhost:3001/case/search" 

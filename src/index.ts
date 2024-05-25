@@ -3,24 +3,55 @@ import { Hono } from "hono";
 import { html } from "hono/html";
 import { cors } from "hono/cors";
 import { caseData } from "../data/cases";
+import countyCodes from "../data/county_codes"
 
 const app = new Hono();
 
 app.use("/*", cors());
 
-app.get("/case", (c) => {
-  const listItems = getListItems(caseData.cases);
+/** GET Endpoints */ 
 
-  console.log({ listItems });
+app.get("/case", async (c) => {
+  const listItems = getListItems(caseData.cases);
   return c.html(html`${listItems}`);
 });
+
+app.get("/helbing", async (c) => {
+  const searchResults = caseData.searchCase("helbing");
+  const listItems = getListItems(searchResults);
+  return c.html(html`${listItems}`);
+})
+
+app.get("/arnoldsmith", async (c) => {
+  const searchResults = caseData.searchCase("arnold smith");
+  const listItems = getListItems(searchResults);
+  return c.html(html`${listItems}`);
+})
+
+app.get("/gmlaw", async (c) => {
+  const searchResults = caseData.searchCase("GM Law");
+  const listItems = getListItems(searchResults);
+  return c.html(html`${listItems}`);
+})
+
+app.get("/frontline", async (c) => {
+  const searchResults = caseData.searchCase("frontline");
+  const listItems = getListItems(searchResults);
+  return c.html(html`${listItems}`);
+})
+
+app.get("/clp", async (c) => {
+  const searchResults = caseData.searchCase("clp");
+  const listItems = getListItems(searchResults);
+  return c.html(html`${listItems}`);
+})
+
+/** POST Endpoints */ 
 
 app.post("/case", async (c) => {
   const { newCase } = await c.req.parseBody();
   caseData.createCase(newCase as string);
-
   const listItems = getListItems(caseData.cases);
-
   return c.html(html`${listItems}`);
 });
 
@@ -34,18 +65,14 @@ app.post("/case/search", async (c) => {
 app.put("/case/:id", async (c) => {
   const caseId = await c.req.param("id");
   caseData.updateCase(Number(caseId));
-
   const listItems = getListItems(caseData.cases);
-
   return c.html(html`${listItems}`);
 });
 
 app.delete("/case/:id", async (c) => {
   const caseId = await c.req.param("id");
   caseData.deleteCase(Number(caseId));
-
   const listItems = getListItems(caseData.cases);
-
   return c.html(html`${listItems}`);
 });
 
@@ -58,6 +85,7 @@ serve({
 });
 
 function getTableRows(cases: typeof caseData.cases) {
+  const county = countyCodes[1]
   return cases
     .sort((a, b) =>
       b.caseNo.localeCompare(a.caseNo, undefined, { numeric: true })
@@ -73,8 +101,11 @@ function getTableRows(cases: typeof caseData.cases) {
           <td class="whitespace-nowrap px-3 pt-4 pb-4 text-sm text-gray-500">
             <span class="text-sm">${c_se.caption}</span>
           </td>
+          <td class="whitespace-nowrap px-3 pt-4 pb-4 text-sm text-gray-500">
+          <span class="text-sm">${countyCodes[c_se.countyNo]}</span>
+          </td>
           <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2">
-            <span class="text-sm">${c_se.countyNo}</span>
+            <span class="text-sm">${c_se.client}</span>
           </td>
           <td class="whitespace-nowrap text-sm text-gray-500 px-3 py-2">
             <span class="text-sm">${c_se.statusDate}</span>

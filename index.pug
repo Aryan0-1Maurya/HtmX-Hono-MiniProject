@@ -96,13 +96,58 @@ html
                                                             option Select...
                                                     div(class='hidden md:block lg:block')
                                                         div(class='flex items-center justify-between')
-                                                            div(class='flex space-x-4')
-                                                                a(class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') All
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Helbing
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Arnold Smith
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') GM Law
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Frontline
-                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') CLP
+                                                            div(
+                                                                class='flex space-x-4 tab-list', 
+                                                                role="tablist",
+                                                                hx-on:htmx-after-on-load="let currentTab = document.querySelector('[aria-selected=true]'); currentTab.setAttribute('aria-selected', 'false'); currentTab.classList.remove('selected'); let newTab = event.target; newTab.setAttribute('aria-selected', 'true'); newTab.classList.add('selected')")
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="true" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/case" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') All
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="false" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/helbing" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Helbing
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="false" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/arnoldsmith" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Arnold Smith
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="false" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/gmlaw" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') GM Law
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="false" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/frontline" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Frontline
+                                                                button(
+                                                                    aria-controls="search-results" 
+                                                                    aria-selected="false" 
+                                                                    role="tab" 
+                                                                    hx-get="http://localhost:3001/clp" 
+                                                                    hx-target="#search-results"
+                                                                    hx-swap="outerHTML"
+                                                                    class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') CLP
                                                             div
                                                                 input#search.cursor-default.ring-1.ring-inset.rounded-md.border-0.ring.ring-gray-300.text-gray-400.text-base.leading-none.w-auto.pt-2.pb-2.z-40(
                                                                     type="search" 
@@ -131,8 +176,10 @@ html
                                                             span(class='text-sm') Case No
                                                         th(class='pl-3 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5')
                                                             span(class='text-sm') Caption
-                                                        th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
+                                                        th(class='pl-3 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5')
                                                             span(class='text-sm') County
+                                                        th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
+                                                            span(class='text-sm') Firm
                                                         th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
                                                             span(class='text-sm') Status Date
                                                             th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
