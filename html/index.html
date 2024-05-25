@@ -95,13 +95,15 @@
                 <div class="flow-root mt-8">
                   <div class="overflow-x-auto -mx-4 -my-2 md:-mx-6 lg:-mx-8">
                     <div class="inline-block align-middle min-w-full py-2 px-0 md:px-6 lg:px-8 min-h-screen">
-                      <table class="divide-y divide-gray-300 min-w-full" hx-get="http://localhost:3001/case" hx-trigger="load" hx-swap="innerHTML" hx-target="#search-results">
+                      <table class="divide-y divide-gray-300 min-w-full" hx-get="http://localhost:3001/case" hx-trigger="load" hx-swap="outerHTML" hx-target="#search-results">
                         <thead class="font-bold border-b border-black border-opacity-10">
                           <tr class="divide-x border-black border-opacity-10">
                             <th class="pl-4 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5 md:pl-0 lg:pl-0"><span class="text-sm">Case No</span></th>
                             <th class="pl-3 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5"><span class="text-sm">Caption</span></th>
                             <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">County</span></th>
-                            <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">Filing Date</span></th>
+                            <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"><span class="text-sm">Filing Date</span>
+                              <th class="text-left text-sm font-semibold text-gray-900 px-3 py-2"></th><span class="text-sm"></span>
+                            </th>
                           </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 divide-opacity-10" id="search-results"></tbody>

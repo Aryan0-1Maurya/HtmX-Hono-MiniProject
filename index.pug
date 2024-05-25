@@ -103,7 +103,7 @@ html
                                         div(class='inline-block align-middle min-w-full py-2 px-0 md:px-6 lg:px-8 min-h-screen')
                                             table(hx-get='http://localhost:3001/case' 
                                                     hx-trigger='load' 
-                                                    hx-swap='innerHTML' 
+                                                    hx-swap='outerHTML' 
                                                     hx-target='#search-results'
                                                     class='divide-y divide-gray-300 min-w-full')
                                                 thead.font-bold(class='border-b border-black border-opacity-10')
@@ -116,4 +116,6 @@ html
                                                             span(class='text-sm') County
                                                         th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
                                                             span(class='text-sm') Filing Date
+                                                            th(class='text-left text-sm font-semibold text-gray-900 px-3 py-2')
+                                                            span(class='text-sm')
                                                 tbody#search-results(class='divide-y divide-gray-200 divide-opacity-10')
