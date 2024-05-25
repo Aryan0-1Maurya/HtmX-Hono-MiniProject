@@ -82,30 +82,40 @@ html
                     div(class='-mt-32')
                         div(class='max-w-7xl mx-auto px-4 pb-12 md:px-6 lg:px-8 min-h-screen')
                             div(class='rounded-lg bg-white px-5 py-6 shadow md:px-6 lg:px-6 h-full min-h-screen')
-                                div(class='px-4 md:px-6 lg:px-8')
+                                div(class='')
                                     div(class='block items-start md:flex md:items-center lg:block lg:items-start')
                                         div(class='flex-auto')
-                                        div(class='mt-4 ml-0 flex-auto md:mt-0 md:ml-16 lg:ml-16')
-                                        form(class='flex-col mb-0')
-                                            div
-                                                div(class='hidden md:hidden lg:hidden')
-                                                    label.sr-only(class='text-sm tracking-wide') Select a tab
-                                                    select#tabs.border.border-gray-300.rounded-md.w-full(class='focus:outline-none text-sm tracking-wide leading-5 border-opacity-15 text-black focus:border-opacity-50 disabled:opacity-50 focus:border-indigo-500 focus:ring-indigo-500')
-                                                        option Select...
-                                                div(class='hidden md:block lg:block')
-                                                    div(class='space-x-4 flex')
-                                                        a(class='text-gray-500 rounded-md font-medium hover:text-gray-700 text-sm pr-3 pt-2 pb-2 pl-3') Helbing
-                                                        a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Arnold Smith
-                                                        a(class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') GM Law
-                                                        a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Blitt & Gaines
+                                        div(class='mt-4 ml-0 flex-auto md:mt-0 md:ml-8 lg:ml-8')
+                                            form(class='flex flex-col mb-0')
+                                                div
+                                                    div(class='hidden md:hidden lg:hidden')
+                                                        label.sr-only(class='text-sm tracking-wide') Select a tab
+                                                        select#tabs.border.border-gray-300.rounded-md.w-full(class='focus:outline-none text-sm tracking-wide leading-5 border-opacity-15 text-black focus:border-opacity-50 disabled:opacity-50 focus:border-indigo-500 focus:ring-indigo-500')
+                                                            option Select...
+                                                    div(class='hidden md:block lg:block')
+                                                        div(class='flex items-center justify-between')
+                                                            div(class='flex space-x-4')
+                                                                a(class='text-gray-500 rounded-md font-medium hover:text-gray-700 text-sm pr-3 pt-2 pb-2 pl-3') Helbing
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Arnold Smith
+                                                                a(class='bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 font-medium text-sm') GM Law
+                                                                a(class='text-gray-500 rounded-md px-3 py-2 font-medium hover:text-gray-700 text-sm') Blitt & Gaines
+                                                            div
+                                                                input#search.cursor-default.ring-1.ring-inset.rounded-md.border-0.ring.ring-gray-300.text-gray-400.text-base.leading-none.w-auto.pt-2.pb-2.z-40(
+                                                                    type="search" 
+                                                                    placeholder="" 
+                                                                    autocomplete="off" 
+                                                                    class="focus:outline-none placeholder:text-gray-400 focus:ring-inset focus:ring-2 focus:ring-gray-400 md:text-sm sm:text-sm lg:text-14px md:leading-6 sm:leading-6 lg:leading-6 shadow-0px-1px-2px-0px-rgba(0,0,0,0.05)"
+                                                                    style="width: 300px; height: 32px; padding-top: 4px; padding-bottom: 4px;"
+                                                                )
+
                                 div(class='flow-root mt-8')
                                     div(class='overflow-x-auto -mx-4 -my-2 md:-mx-6 lg:-mx-8')
                                         div(class='inline-block align-middle min-w-full py-2 px-0 md:px-6 lg:px-8 min-h-screen')
                                             table(hx-get='http://localhost:3001/case' 
-                                                    hx-trigger='load' 
-                                                    hx-swap='outerHTML' 
-                                                    hx-target='#search-results'
-                                                    class='divide-y divide-gray-300 min-w-full')
+                                                hx-trigger='load' 
+                                                hx-swap='outerHTML' 
+                                                hx-target='#search-results'
+                                                class='divide-y divide-gray-300 min-w-full')
                                                 thead.font-bold(class='border-b border-black border-opacity-10')
                                                     tr(class='divide-x border-black border-opacity-10')
                                                         th(class='pl-4 pr-3 text-left text-sm font-semibold text-gray-900 pt-3.5 pb-3.5 md:pl-0 lg:pl-0')
