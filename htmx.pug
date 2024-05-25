@@ -1,0 +1,28 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title HTMX Matters
+    script(src='https://unpkg.com/htmx.org@1.9.10' integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC' crossorigin='anonymous')
+h3
+    | Search Cases 
+    span.htmx-indicator
+        img(src='/img/bars.svg')
+        |  Searching...
+input.form-control(type='search' 
+                    name='search' 
+                    placeholder='Begin Typing To Search Users...' 
+                    hx-post='http://localhost:3001/case/search' 
+                    hx-trigger='input changed delay:500ms, search' 
+                    hx-target='#search-results' 
+                    hx-indicator='.htmx-indicator')
+table.table(hx-get='http://localhost:3001/case' 
+            hx-trigger='load' 
+            hx-swap='innerHTML' 
+            hx-target='#search-results')
+    thead
+        tr
+            th Case No
+            th Last Name
+            th Email
+    tbody#search-results
