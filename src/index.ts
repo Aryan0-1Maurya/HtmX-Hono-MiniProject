@@ -110,7 +110,7 @@ function getTableRows(cases: typeof caseData.cases) {
 
 function getListItems(cases: typeof caseData.cases) {
   const rows = getTableRows(cases);
-  return html`<tbody class="divide-y divide-gray-200 divide-opacity-10  hx-get="http://localhost:3001/case" hx-trigger="load" hx-swap="outerHTML" hx-target="#case-body"">${rows}</tbody>`;
+  return html`<tbody id="search-results" class="divide-y divide-gray-200 divide-opacity-10  hx-get="http://localhost:3001/case" hx-trigger="load" hx-swap="outerHTML" hx-target="#search-results"">${rows}</tbody>`;
 }
 
 //   return cases.sort((a, b) => b.caseNo.localeCompare(a.caseNo, undefined, {numeric: true})

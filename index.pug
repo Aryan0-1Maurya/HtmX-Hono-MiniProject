@@ -102,12 +102,17 @@ html
                                                             div
                                                                 input#search.cursor-default.ring-1.ring-inset.rounded-md.border-0.ring.ring-gray-300.text-gray-400.text-base.leading-none.w-auto.pt-2.pb-2.z-40(
                                                                     type="search" 
-                                                                    placeholder="" 
+                                                                    class="form-control"
                                                                     autocomplete="off" 
                                                                     class="focus:outline-none placeholder:text-gray-400 focus:ring-inset focus:ring-2 focus:ring-gray-400 md:text-sm sm:text-sm lg:text-14px md:leading-6 sm:leading-6 lg:leading-6 shadow-0px-1px-2px-0px-rgba(0,0,0,0.05)"
                                                                     style="width: 300px; height: 32px; padding-top: 4px; padding-bottom: 4px;"
+                                                                    name="search" 
+                                                                    hx-post="http://localhost:3001/case/search" 
+                                                                    hx-trigger="input changed delay:500ms, search" 
+                                                                    hx-swap='outerHTML' 
+                                                                    hx-target='#search-results'
                                                                 )
-
+                                                                
                                 div(class='flow-root mt-8')
                                     div(class='overflow-x-auto -mx-4 -my-2 md:-mx-6 lg:-mx-8')
                                         div(class='inline-block align-middle min-w-full py-2 px-0 md:px-6 lg:px-8 min-h-screen')
